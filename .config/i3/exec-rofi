@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+rofi -combi-modi window,run -show combi -no-case-sensitive -lines 5 -eh 2 -font "System San Francisco Display 13" -opacity 90 -mesg "string" -no-cycle -threads 2 
+
+
+
+

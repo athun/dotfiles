@@ -1,6 +1,7 @@
 *
 !.bashrc
-!.config/i3*
+!.config/i3
+!.config/i3/*
 !.greet.py
 !mypasswords.txt
 !.fonts

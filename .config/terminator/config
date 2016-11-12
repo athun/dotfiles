@@ -1,0 +1,88 @@
+[global_config]
+  focus = system
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+
+  [[Softblue]]
+    background_color = "#0d1926"
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    font = DejaVu Sans Mono 12
+    foreground_color = "#7a97b4"
+    palette = "#2c4966:#cf5a48:#48cf5a:#bdcf48:#5a48cf:#cf48bd:#48bdcf:#7a97b4:#405c7a:#e7aba2:#a2e7ab:#dde7a2:#aba2e7:#e7a2dd:#a2dde7:#91adcb"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[default]]
+    background_color = "#0d1926"
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    font = DejaVu Sans Mono 11
+    foreground_color = "#7a97b4"
+    palette = "#2c4966:#cf5a48:#48cf5a:#bdcf48:#5a48cf:#cf48bd:#48bdcf:#7a97b4:#405c7a:#e7aba2:#a2e7ab:#dde7a2:#aba2e7:#e7a2dd:#a2dde7:#91adcb"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Black]]
+    background_darkness = 0.8
+    background_image = None
+    font = DejaVu Sans Mono 12
+    foreground_color = "#ffffff"
+    palette = "#2c4966:#cf5a48:#48cf5a:#bdcf48:#5a48cf:#cf48bd:#48bdcf:#7a97b4:#405c7a:#e7aba2:#a2e7ab:#dde7a2:#aba2e7:#e7a2dd:#a2dde7:#91adcb"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Blue]]
+    background_color = "#0d1926"
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    font = Liberation Mono 12
+    foreground_color = "#6e8ec9"
+    palette = "#1c3b76:#cd5740:#40cd57:#b6cd40:#5740cd:#cd40b6:#40b6cd:#6e8ec9:#2f4f8a:#e7ada2:#a2e7ad:#dbe7a2:#ada2e7:#e7a2db:#a2dbe7:#80a0db"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Cyan]]
+    background_color = "#0d1926"
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    font = Liberation Mono 12
+    foreground_color = "#70c0c7"
+    palette = "#1d6e75:#cd5740:#40cd57:#b6cd40:#5740cd:#cd40b6:#40b6cd:#70c0c7:#318188:#e7ada2:#a2e7ad:#dbe7a2:#ada2e7:#e7a2db:#a2dbe7:#82d2d9"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Matrix]]
+    antialias = False
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    font = Clean 16
+    foreground_color = "#6dc063"
+    palette = "#116407:#548025:#2fa723:#54a523:#2d824a:#53804a:#2da748:#6dc063:#217316:#71b053:#5ec352:#71c252:#5db066:#70b066:#5dc365:#81d376"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Yellow]]
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    font = Liberation Mono 12
+    foreground_color = "#b7b36b"
+    palette = "#5b570f:#b84837:#37b848:#a7b837:#4837b8:#b837a7:#37a7b8:#b7b36b:#6a671f:#e7b5ae:#aee7b5:#dfe7ae:#b5aee7:#e7aedf:#aedfe7:#cac77e"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

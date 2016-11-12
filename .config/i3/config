@@ -1,0 +1,224 @@
+# Constants
+
+  # Pallete: blor.theme
+  # (https://davedavenport.github.io/rofi/p05-Themes.html)
+  set $back0 "#1B2B34"
+  set $fore0 "#D8DEE9"
+  set $bold0 "#FAC863"
+
+  set $fore1 "#F99157"
+  set $fore2 "#6699CC"
+
+
+  
+  # set $wallpaper "/home/alexander/Pictures/ancilla xxx/ancilla1.png"
+  # set $wallpaper "/home/alexander/Pictures/1473595152094.jpg"
+  set $wallpaper "/home/alexander/Pictures/city.jpg"
+
+  set $mod Mod4
+  set $cback00 #2f343f
+  set $cback01 #9399A5
+  set $cfore01 #d3dae3
+
+  set $base00 #101218
+  set $base01 #1f222d
+  set $base02 #252936
+  set $base03 #7780a1
+  set $base04 #C0C5CE
+  set $base05 #d1d4e0
+  set $base06 #C9CCDB
+  set $base07 #ffffff
+  set $base08 #ee829f
+  set $base09 #f99170
+  set $base0A #ffefcc
+  set $base0B #a5ffe1
+  set $base0C #97e0ff
+  set $base0D #97bbf7
+  set $base0E #c0b7f9
+  set $base0F #00ff00
+### Base0F #fcc09e
+  
+  set $workspace1 "1 "
+  set $workspace2 "2 "
+  set $workspace3 "3 "
+  set $workspace4 "4 ?"
+  set $workspace5 "5 ?"
+  set $workspace6 "6 ?"
+  set $workspace7 "7 ?"
+  set $workspace8 "8 "
+  set $workspace9 "9 "
+  set $workspace10 "10 "
+
+
+# General configuration
+  font pango:System San Francisco Display 11
+  #font pango:monospace 8
+  floating_modifier $mod
+
+  hide_edge_borders both
+
+
+# Window-related bindings
+  bindsym $mod+Shift+q kill
+  # change focus
+  bindsym $mod+j focus left
+  bindsym $mod+k focus down
+  bindsym $mod+l focus up
+  bindsym $mod+semicolon focus right
+  # alternatively, you can use the cursor keys:
+  bindsym $mod+Left focus left
+  bindsym $mod+Down focus down
+  bindsym $mod+Up focus up
+  bindsym $mod+Right focus right
+  # move focused window
+  bindsym $mod+Shift+j move left
+  bindsym $mod+Shift+k move down
+  bindsym $mod+Shift+l move up
+  bindsym $mod+Shift+semicolon move right
+  # alternatively, you can use the cursor keys:
+  bindsym $mod+Shift+Left move left
+  bindsym $mod+Shift+Down move down
+  bindsym $mod+Shift+Up move up
+  bindsym $mod+Shift+Right move right
+  # split in horizontal orientation
+  bindsym $mod+h split h
+  # split in vertical orientation
+  bindsym $mod+v split v
+  # enter fullscreen mode for the focused container
+  bindsym $mod+f fullscreen toggle
+  # change container layout (stacked, tabbed, toggle split)
+  bindsym $mod+s layout stacking
+  bindsym $mod+w layout tabbed
+  bindsym $mod+e layout toggle split
+  # toggle tiling / floating
+  bindsym $mod+Shift+space floating toggle
+  # change focus between tiling / floating windows
+  bindsym $mod+space focus mode_toggle
+  # focus the parent container
+  bindsym $mod+a focus parent
+
+
+# Window resize
+  bindsym $mod+r mode "resize"
+  mode "resize" {
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
+
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+  }
+
+
+# Restart-related bindings
+  # bindsym $mod+d exec dmenu_run
+  bindsym $mod+Shift+c reload
+  bindsym $mod+Shift+r restart
+  bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+# Program-related bindings
+  bindsym $mod+d exec ~/.config/i3/exec-rofi
+  bindsym $mod+Return exec i3-sensible-terminal
+  bindsym $mod+Shift+x exec dm-tool lock
+
+
+# Volume and media bindings
+  bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
+  bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
+  bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
+
+# Workspace bindings
+  # switch to workspace
+  bindsym $mod+1 workspace $workspace1
+  bindsym $mod+2 workspace $workspace2
+  bindsym $mod+3 workspace $workspace3
+  bindsym $mod+4 workspace $workspace4
+  bindsym $mod+5 workspace $workspace5
+  bindsym $mod+6 workspace $workspace6
+  bindsym $mod+7 workspace $workspace7
+  bindsym $mod+8 workspace $workspace8
+  bindsym $mod+9 workspace $workspace9
+  bindsym $mod+0 workspace $workspace10
+
+  # move focused container to workspace
+  bindsym $mod+Shift+1 move container to workspace $workspace1
+  bindsym $mod+Shift+2 move container to workspace $workspace2
+  bindsym $mod+Shift+3 move container to workspace $workspace3
+  bindsym $mod+Shift+4 move container to workspace $workspace4
+  bindsym $mod+Shift+5 move container to workspace $workspace5
+  bindsym $mod+Shift+6 move container to workspace $workspace6
+  bindsym $mod+Shift+7 move container to workspace $workspace7
+  bindsym $mod+Shift+8 move container to workspace $workspace8
+  bindsym $mod+Shift+9 move container to workspace $workspace9
+  bindsym $mod+Shift+0 move container to workspace $workspace10
+
+
+# Workspace monitors
+  
+
+# Program workspaces
+  assign [class="Firefox"] $workspace1 
+  assign [class="Vlc"] $workspace9 
+  assign [class="Rhythmbox"] $workspace10
+  assign [class="Hexchat"] $workspace3
+
+# Wallpaper
+  exec_always feh --bg-fill $wallpaper
+
+# Monitor settings
+  # one screen:
+  exec_always xrandr --output VGA-1 --off --output DVI-D-1 --mode 1680x1050 --pos 0x0 --rotate normal --output HDMI-1 --off
+  # two screens:
+  #exec_always xrandr --output VGA-1 --mode 1280x1024 --pos 1680x0 --rotate normal --output DVI-D-1 --mode 1680x1050 --pos 0x0 --rotate normal --output HDMI-1 --off
+
+# Window colours
+#                         border  background text    indicator
+# client.focused          $fore0  $fore0     $back0  $base0F
+# client.focused_inactive $base02 $base02    $base03 $base0F
+# client.unfocused        $base02 $base02    $base03 $base0F
+# client.urgent           $base02 $base08    $base00 $base0F
+  client.focused          $base01 $cback00  $cfore01 $base0F
+  client.focused_inactive $base02 $base02    $base03 $base0F
+  client.unfocused        $base02 $base02    $base03 $base0F
+  client.urgent           $base02 $base08    $base00 $base0F
+
+# Bar
+  bar {
+    status_command i3status
+    status_command i3pystatus -c ~/.config/i3pyscripts/min.py
+    position top
+    colors {
+      separator $base03
+      background $base01
+      statusline $base05
+#                        border  background text
+      #focused_workspace  $bold0  $back0     $bold0
+      #active_workspace   $back0  $back0     $bold0
+      #inactive_workspace $back0  $back0     $fore0
+      #urgent_workspace   $back0  $back0     $fore1
+      focused_workspace  $base01 $cback00   $base07
+      active_workspace   $base01 $base02    $base03
+      inactive_workspace $base01 $base01    $base03
+      urgent_workspace   $base01 $base01    $base08
+    }
+  }
+
+
+# Startup programs
+  exec hexchat
+  exec firefox
+  exec rhythmbox
+
+
+
+
+
+
+
