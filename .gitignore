@@ -1,1 +1,11 @@
 *
+!.bashrc
+!.config
+!.config/*
+!.greet.py
+!mypasswords.txt
+!.fonts
+!.fonts/*
+!git-prompt.sh
+
+
